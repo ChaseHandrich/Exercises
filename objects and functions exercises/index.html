@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects and Functions Exercises</title>
+</head>
+<style>
+    body {
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+}
+
+p {
+    margin: 0;
+}
+
+span {
+    display: inline-block;
+    font-family: monospace;
+    margin-right: 10px;
+}
+
+.year {
+    color: #999;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+</style>
+<body>
+    <div id="movie1">
+        <h1 class="title"></h1>
+        <h2>
+            <span class="year"></span>
+            <span class="genre"></span>
+        </h2>
+        <p class="description"></p>
+    </div>
+    <div id="movie2">
+        <h1 class="title"></h1>
+        <h2>
+            <span class="year"></span>
+            <span class="genre"></span>
+        </h2>
+        <p class="description"></p>
+    </div>
+    <div id="movie3">
+        <h1 class="title"></h1>
+        <h2>
+            <span class="year"></span>
+            <span class="genre"></span>
+        </h2>
+        <p class="description"></p>
+    </div>
+</body>
+<script>
+    const movie1 = {'title' : 'Dune', 'Year' : '2021', 'Genre' : 'Science Fiction', 'Description' : "Feature adaptation of Frank Herbert's science fiction novel, about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy."}
+    const movie2 = {'title' : 'The Matrix', 'Year' : '1999', 'Genre' : 'Science Fiction', 'Description' : "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers."}
+    const movie3 = {'title' : 'The Lord of the Rings: The Fellowship of the Ring', 'Year' : '2001', 'Genre' : 'Fantasy', 'Description' : "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."}
+    function printMovie(movie)
+    {
+        console.log(movie.title)
+        console.log(movie.Description)
+    }
+    printMovie(movie1)
+    printMovie(movie2)
+    printMovie(movie3)
+    const populateMovie = (element, {title, Year, Genre, Description}) => { 
+        element.querySelector('.title').textContent = title
+        element.querySelector('.year').textContent = Year
+        element.querySelector('.genre').textContent = Genre
+        element.querySelector('.description').textContent = Description
+    }
+    const div1 = document.querySelector('#movie1')
+    const div2 = document.querySelector('#movie2')
+    const div3 = document.querySelector('#movie3')
+    populateMovie(div1, movie1)
+    populateMovie(div2, movie2)
+    populateMovie(div3, movie3)
+</script>
+</html>

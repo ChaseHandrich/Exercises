@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/site.js" defer></script>
+    <title>Document</title>
+    <style>
+        form{
+            width: 200px;
+        }
+        input{
+            margin: 2px;
+        }
+        .invalid {border: 1px solid red;}
+        input:focus{
+            outline: none;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <input type="text" id="name" placeholder="Name" required name="name">
+        <input type="email" id="email"  placeholder="Email" required name="email">
+        <input type="tel" id="phone"  placeholder="Phone" required name="phone">
+        <input type="password" id="password"  placeholder="Password" required minLength="8" name="password">
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
